@@ -55,7 +55,7 @@ async def start(event):
     user_id = event.sender_id
     collection.update_one({"user_id": user_id}, {"$set": {"user_id": user_id}}, upsert=True)
     buttons = [
-        [Button.url("Join Channel", url="https://t.me/TryToLiveAlon")],
+        [Button.url("Join Channel", url="https://t.me/deathking_worldd")],
         [Button.url("Contact Me", url="https://t.me/TryToLiveAlon")],
     ]
     await gagan.send_file(
@@ -125,7 +125,7 @@ PRE_TEXT = """💰 **Premium Price**: Starting from $2 or 200 INR accepted via *
 async def plan_command(event):
     # Creating inline keyboard with buttons
     buttons = [
-        [Button.url("Send Gift Card Code", url="https://t.me/TryToLiveAlon")]
+        [Button.url("Send Screenshot", url="https://t.me/CONTACT_TO_AD1MIN_BOT")]
     ]
 
     # Sending photo with caption and buttons
@@ -148,7 +148,7 @@ TERM_TEXT = """📜 **Terms and Conditions** 📜\n
 async def term_command(event):
     # Creating inline keyboard with buttons
     buttons = [
-        [Button.url("Query?", url="https://t.me/TryToLiveAlon"),
+        [Button.url("Query?", url="https://t.me/CONTACT_TO_AD1MIN_BOT"),
          Button.url("Channel", url="https://t.me/TryToLiveAlon")]
     ]
 
