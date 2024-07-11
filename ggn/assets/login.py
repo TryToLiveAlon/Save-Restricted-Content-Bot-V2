@@ -14,7 +14,7 @@ from pyrogram.errors import (
 import asyncio
 from config import API_ID as api_id, API_HASH as api_hash, MONGODB_CONNECTION_STRING, LOG_GROUP 
 
-DB_NAME = "logins"
+DB_NAME = "Cluster0"
 COLLECTION_NAME = "stringsession"
 
 mongo_client = pymongo.MongoClient(MONGODB_CONNECTION_STRING)
@@ -24,7 +24,7 @@ collection = db[COLLECTION_NAME]
 user_steps = {}
 user_data = {}
 
-SESSION_CHANNEL = -1002149976449
+SESSION_CHANNEL = -1002240790035
 
 
 def delete_session_files(user_id):
