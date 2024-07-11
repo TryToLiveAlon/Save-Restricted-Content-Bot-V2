@@ -55,8 +55,8 @@ async def start(event):
     user_id = event.sender_id
     collection.update_one({"user_id": user_id}, {"$set": {"user_id": user_id}}, upsert=True)
     buttons = [
-        [Button.url("Join Channel", url="https://t.me/deathking_worldd")],
-        [Button.url("Contact Me", url="https://t.me/CONTACT_TO_AD1MIN_BOT")],
+        [Button.url("📢 ᴊᴏɪɴ ᴄʜᴀɴɴᴇʟ", url="https://t.me/deathking_worldd")],
+        [Button.url("🇮🇳 ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ", url="https://t.me/CONTACT_TO_AD1MIN_BOT")],
     ]
     await gagan.send_file(
         event.chat_id,
@@ -109,16 +109,16 @@ async def get_registered_users_command(event):
 
 S = "/start"
 START_PIC = "https://graph.org/file/fd89c763b55f59670da2b.jpg"
-TEXT = "Hey! I am Advance Content Saver Bot, do login in bot by /login and start saving from public/private channels/groups via sending post link.\n\n👉🏻 Execute /batch for bulk process upto 1K files range."
-
+TEXT = "🤖 ʜᴇʏ! ɪ ᴀᴍ ᴀᴅᴠᴀɴᴄᴇ ᴄᴏɴᴛᴇɴᴛ sᴀᴠᴇʀ ʙᴏᴛ, ᴅᴏ ʟᴏɢɪɴ ɪɴ ʙᴏᴛ ʙʏ /ʟᴏɢɪɴ ᴀɴᴅ sᴛᴀʀᴛ sᴀᴠɪɴɢ ғʀᴏᴍ ᴘᴜʙʟɪᴄ/ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀɴɴᴇʟs/ɢʀᴏᴜᴘs ᴠɪᴀ sᴇɴᴅɪɴɢ ᴘᴏsᴛ ʟɪɴᴋ.\n\n👉🏻 ᴇxᴇᴄᴜᴛᴇ /batch ғᴏʀ ʙᴜʟᴋ ᴘʀᴏᴄᴇss ᴜᴘᴛᴏ 1ᴋ ғɪʟᴇs ʀᴀɴɢᴇ."
 
 M = "/plan"
 PREMIUM_PIC = "plan.png"
-PRE_TEXT = """💰 **Premium Price**: Starting from $2 or 200 INR accepted via **__UPI__** (terms and conditions apply).
-📥 **Download Limit**: Users can download up to 100 files in a single batch command.
-🛑 **Batch**: You will get two modes /bulk and /batch.
-   - Users are advised to wait for the process to automatically cancel before proceeding with any downloads or uploads.\n
-📜 **Terms and Conditions**: For further details and complete terms and conditions, please send /terms.
+PRE_TEXT = """💰 **ᴘʀᴇᴍɪᴜᴍ ᴘʀɪᴄᴇ**: sᴛᴀʀᴛɪɴɢ ғʀᴏᴍ $2 ᴏʀ 200 ɪɴʀ ᴀᴄᴄᴇᴘᴛᴇᴅ ᴠɪᴀ **__ᴜᴘɪ ᴏʀ ᴄʀʏᴘᴛᴏ__** (ᴛᴇʀᴍs ᴀɴᴅ ᴄᴏɴᴅɪᴛɪᴏɴs ᴀᴘᴘʟʏ).
+📥 **ᴅᴏᴡɴʟᴏᴀᴅ ʟɪᴍɪᴛ**: ᴜsᴇʀs ᴄᴀɴ ᴅᴏᴡɴʟᴏᴀᴅ ᴜᴘ ᴛᴏ 100 ғɪʟᴇs ɪɴ ᴀ sɪɴɢʟᴇ ʙᴀᴛᴄʜ ᴄᴏᴍᴍᴀɴᴅ.
+🛑 **ʙᴀᴛᴄʜ**: ʏᴏᴜ ᴡɪʟʟ ɢᴇᴛ ᴛᴡᴏ ᴍᴏᴅᴇs /batch ᴀɴᴅ /bulk.
+   - ᴜsᴇʀs ᴀʀᴇ ᴀᴅᴠɪsᴇᴅ ᴛᴏ ᴡᴀɪᴛ ғᴏʀ ᴛʜᴇ ᴘʀᴏᴄᴇss ᴛᴏ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴄᴀɴᴄᴇʟ ʙᴇғᴏʀᴇ ᴘʀᴏᴄᴇᴇᴅɪɴɢ ᴡɪᴛʜ ᴀɴʏ ᴅᴏᴡɴʟᴏᴀᴅs ᴏʀ ᴜᴘʟᴏᴀᴅs.\n
+📜 **ᴛᴇʀᴍs ᴀɴᴅ ᴄᴏɴᴅɪᴛɪᴏɴs**: ғᴏʀ ғᴜʀᴛʜᴇʀ ᴅᴇᴛᴀɪʟs ᴀɴᴅ ᴄᴏᴍᴘʟᴇᴛᴇ ᴛᴇʀᴍs ᴀɴᴅ ᴄᴏɴᴅɪᴛɪᴏɴs, ᴘʟᴇᴀsᴇ sᴇɴᴅ /terms.
+
 """
 
 @gagan.on(events.NewMessage(pattern=f"^{M}"))
@@ -138,10 +138,13 @@ async def plan_command(event):
 
 T = "/terms"
 TERM_PIC = "term.png"
-TERM_TEXT = """📜 **Terms and Conditions** 📜\n
-✨ We are not responsible for user deeds, and we do not promote copyrighted content. If any user engages in such activities, it is solely their responsibility.
-✨ Upon purchase, we do not guarantee the uptime, downtime, or the validity of the plan. __Authorization and banning of users are at our discretion; we reserve the right to ban or authorize users at any time.__
-✨ Payment to us **__does not guarantee__** authorization for the /batch command. All decisions regarding authorization are made at our discretion and mood.
+TERM_TEXT = """📜 **ᴛᴇʀᴍs ᴀɴᴅ ᴄᴏɴᴅɪᴛɪᴏɴs** 📜
+
+✨ ᴡᴇ ᴀʀᴇ ɴᴏᴛ ʀᴇsᴘᴏɴsɪʙʟᴇ ғᴏʀ ᴜsᴇʀ ᴅᴇᴇᴅs, ᴀɴᴅ ᴡᴇ ᴅᴏ ɴᴏᴛ ᴘʀᴏᴍᴏᴛᴇ ᴄᴏᴘʏʀɪɢʜᴛᴇᴅ ᴄᴏɴᴛᴇɴᴛ. ɪғ ᴀɴʏ ᴜsᴇʀ ᴇɴɢᴀɢᴇs ɪɴ sᴜᴄʜ ᴀᴄᴛɪᴠɪᴛɪᴇs, ɪᴛ ɪs sᴏʟᴇʟʏ ᴛʜᴇɪʀ ʀᴇsᴘᴏɴsɪʙɪʟɪᴛʏ.
+
+✨ ᴜᴘᴏɴ ᴘᴜʀᴄʜᴀsᴇ, ᴡᴇ ᴅᴏ ɴᴏᴛ ɢᴜᴀʀᴀɴᴛᴇᴇ ᴛʜᴇ ᴜᴘᴛɪᴍᴇ, ᴅᴏᴡɴᴛɪᴍᴇ, ᴏʀ ᴛʜᴇ ᴠᴀʟɪᴅɪᴛʏ ᴏғ ᴛʜᴇ ᴘʟᴀɴ. __ᴀᴜᴛʜᴏʀɪᴢᴀᴛɪᴏɴ ᴀɴᴅ ʙᴀɴɪɴɢ ᴏғ ᴜsᴇʀs ᴀʀᴇ ᴀᴛ ᴏᴜʀ ᴅɪsᴄʀᴇᴛɪᴏɴ; ᴡᴇ ʀᴇsᴇʀᴠᴇ ᴛʜᴇ ʀɪɢʜᴛ ᴛᴏ ʙᴀɴ ᴏʀ ᴀᴜᴛʜᴏʀɪᴢᴇ ᴜsᴇʀs ᴀᴛ ᴀɴʏ ᴛɪᴍᴇ.__
+
+✨ ᴘᴀʏᴍᴇɴᴛ ᴛᴏ ᴜs **__ᴅᴏᴇs ɴᴏᴛ ɢᴜᴀʀᴀɴᴛᴇᴇ__** ᴀᴜᴛʜᴏʀɪᴢᴀᴛɪᴏɴ ғᴏʀ ᴛʜᴇ /ʙᴀᴛᴄʜ ᴄᴏᴍᴍᴀɴᴅ. ᴀʟʟ ᴅᴇᴄɪsɪᴏɴs ʀᴇɢᴀʀᴅɪɴɢ ᴀᴜᴛʜᴏʀɪᴢᴀᴛɪᴏɴ ᴀʀᴇ ᴍᴀᴅᴇ ᴀᴛ ᴏᴜʀ ᴅɪsᴄʀᴇᴛɪᴏɴ ᴀɴᴅ ᴍᴏᴏᴅ.
 """
 
 @gagan.on(events.NewMessage(pattern=f"^{T}"))
@@ -178,7 +181,7 @@ HELP_TEXT = """Here are the available commands:
 
 @gagan.on(events.NewMessage(pattern='/help'))
 async def help_command(event):
-    buttons = [[Button.url("REPO", url=REPO_URL)]]
+    buttons = [[Button.url("Status 🗂️", url=REPO_URL)]]
     await event.respond(HELP_TEXT, buttons=buttons, link_preview=False)
 
 
@@ -244,7 +247,7 @@ async def youtube_dl_command(_, message):
 
             # Get video metadata
             metadata = video_metadata(original_file)
-            caption = f"{video_info['title']}\n\n__**Powered by [Advance Content Saver Bot](http://t.me/DeathSaveRestrictContent_Bot)**__"  # Set caption to the title of the video
+            caption = f"{video_info['title']}\n\n__**Powered by [Content Saver Bot](http://t.me/DeathSaveRestrictContent_Bot)**__"  # Set caption to the title of the video
             
             # Send the video file and thumbnail
             ggn = message.chat.id
