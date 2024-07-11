@@ -108,13 +108,13 @@ async def get_registered_users_command(event):
     os.remove(filename)  # Remove the temporary file after sending
 
 S = "/start"
-START_PIC = "https://graph.org/file/1dfb96bd8f00a7c05f164.gif"
+START_PIC = "https://graph.org/file/fd89c763b55f59670da2b.jpg"
 TEXT = "Hey! I am Advance Content Saver Bot, do login in bot by /login and start saving from public/private channels/groups via sending post link.\n\n👉🏻 Execute /batch for bulk process upto 1K files range."
 
 
 M = "/plan"
 PREMIUM_PIC = "plan.png"
-PRE_TEXT = """💰 **Premium Price**: Starting from $2 or 200 INR accepted via **__Amazon Gift Card__** (terms and conditions apply).
+PRE_TEXT = """💰 **Premium Price**: Starting from $2 or 200 INR accepted via **__UPI__** (terms and conditions apply).
 📥 **Download Limit**: Users can download up to 100 files in a single batch command.
 🛑 **Batch**: You will get two modes /bulk and /batch.
    - Users are advised to wait for the process to automatically cancel before proceeding with any downloads or uploads.\n
@@ -160,7 +160,7 @@ async def term_command(event):
         buttons=buttons
     )
 
-REPO_URL = "https://github.com/devgaganin/Save-Restricted-Content-Bot-Repo"
+REPO_URL = "https://t.me/TryToLiveAlon/60"
 
 HELP_TEXT = """Here are the available commands:
 
