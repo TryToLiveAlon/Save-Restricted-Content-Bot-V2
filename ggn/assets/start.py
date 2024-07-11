@@ -56,7 +56,7 @@ async def start(event):
     collection.update_one({"user_id": user_id}, {"$set": {"user_id": user_id}}, upsert=True)
     buttons = [
         [Button.url("Join Channel", url="https://t.me/deathking_worldd")],
-        [Button.url("Contact Me", url="https://t.me/TryToLiveAlon")],
+        [Button.url("Contact Me", url="https://t.me/CONTACT_TO_AD1MIN_BOT")],
     ]
     await gagan.send_file(
         event.chat_id,
