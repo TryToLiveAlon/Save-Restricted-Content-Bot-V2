@@ -1,5 +1,3 @@
-#GitHub/devgaganin
-
 from time import time
 from speedtest import Speedtest
 import math
@@ -51,38 +49,46 @@ async def speedtest(event):
     result = test.results.dict()
     path = (result['share'])
     currentTime = get_readable_time(time() - botStartTime)
-    string_speed = f'''
-╭─《 🚀 SPEEDTEST INFO 》
+    
+    speed_info = f'''
+<blockquote>╭─《 🚀 SPEEDTEST INFO 》
 ├ <b>Upload:</b> <code>{speed_convert(result['upload'], False)}</code>
 ├ <b>Download:</b>  <code>{speed_convert(result['download'], False)}</code>
 ├ <b>Ping:</b> <code>{result['ping']} ms</code>
 ├ <b>Time:</b> <code>{result['timestamp']}</code>
 ├ <b>Data Sent:</b> <code>{get_readable_file_size(int(result['bytes_sent']))}</code>
-╰ <b>Data Received:</b> <code>{get_readable_file_size(int(result['bytes_received']))}</code>
-
-╭─《 🌐 SPEEDTEST SERVER 》
+╰ <b>Data Received:</b> <code>{get_readable_file_size(int(result['bytes_received']))}</code></blockquote>
+'''
+    
+    server_info = f'''
+<blockquote>╭─《 🌐 SPEEDTEST SERVER 》
 ├ <b>Name:</b> <code>{result['server']['name']}</code>
 ├ <b>Country:</b> <code>{result['server']['country']}, {result['server']['cc']}</code>
 ├ <b>Sponsor:</b> <code>{result['server']['sponsor']}</code>
 ├ <b>Latency:</b> <code>{result['server']['latency']}</code>
 ├ <b>Latitude:</b> <code>{result['server']['lat']}</code>
-╰ <b>Longitude:</b> <code>{result['server']['lon']}</code>
-
-╭─《 👤 CLIENT DETAILS 》
+╰ <b>Longitude:</b> <code>{result['server']['lon']}</code></blockquote>
+'''
+    
+    client_info = f'''
+<blockquote>╭─《 👤 CLIENT DETAILS 》
 ├ <b>IP Address:</b> <code>{result['client']['ip']}</code>
 ├ <b>Latitude:</b> <code>{result['client']['lat']}</code>
 ├ <b>Longitude:</b> <code>{result['client']['lon']}</code>
 ├ <b>Country:</b> <code>{result['client']['country']}</code>
 ├ <b>ISP:</b> <code>{result['client']['isp']}</code>
 ├ <b>ISP Rating:</b> <code>{result['client']['isprating']}</code>
-╰ <b>Powered by ᴅᴇᴀᴛʜ ᴄᴏᴍᴍᴜɴɪᴛʏ</b> 
+╰ <b>Powered by ᴅᴇᴀᴛʜ ᴄᴏᴍᴍᴜɴɪᴛʏ</b></blockquote>
 '''
+    
     try:
-        await event.reply(string_speed,file=path,parse_mode='html')
+        await event.reply(speed_info, parse_mode='html')
+        await event.reply(server_info, parse_mode='html')
+        await event.reply(client_info, file=path, parse_mode='html')
         await speed.delete()
     except Exception as g:
         await speed.delete()
-        await event.reply(string_speed,parse_mode='html' )
+        await event.reply(speed_info + server_info + client_info, parse_mode='html')
 
 def speed_convert(size, byte=True):
     if not byte: size = size / 8
@@ -93,3 +99,4 @@ def speed_convert(size, byte=True):
         size /= power
         zero += 1
     return f"{round(size, 2)} {units[zero]}"
+    
