@@ -628,12 +628,12 @@ MESS = "Customize by your end and Configure your settings ..."
 @gf.on(events.NewMessage(incoming=True, pattern='/settings'))
 async def settings_command(event):
     buttons = [
-        [Button.inline("Set Chat ID", b'setchat'), Button.inline("Set Rename Tag", b'setrename')],
-        [Button.inline("Caption", b'setcaption'), Button.inline("Replace Words", b'setreplacement')],
-        [Button.inline("Remove Words", b'delete')],
-        [Button.inline("Login", b'addsession'), Button.inline("Logout", b'logout')],
-        [Button.inline("Set Thumbnail", b'setthumb'), Button.inline("Remove Thumbnail", b'remthumb')],
-        [Button.url("Report Errors", "https://t.me/TryToLiveAlon")]
+    [Button.inline("🆔 Set Chat ID", b'setchat'), Button.inline("🏷️ Set Rename Tag", b'setrename')],
+    [Button.inline("📸 Caption", b'setcaption'), Button.inline("🔄 Replace Words", b'setreplacement')],
+    [Button.inline("❌ Remove Words", b'delete')],
+    [Button.inline("🔓 Login", b'addsession'), Button.inline("🔒 Logout", b'logout')],
+    [Button.inline("📷 Set Thumbnail", b'setthumb'), Button.inline("🚫 Remove Thumbnail", b'remthumb')],
+    [Button.url("🐞 Report Errors", "https://t.me/TryToLiveAlon")]
     ]
     
     await gf.send_file(
