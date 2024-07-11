@@ -186,7 +186,7 @@ async def help_command(event):
 
 
 def thumbnail(chat_id):
-    return f'{chat_id}.jpg' if os.path.exists(f'{chat_id}.jpg') else f'https://graph.org/file/0abcffc5ff62aa7978028.jpg'
+    return f'{chat_id}.jpg' if os.path.exists(f'{chat_id}.jpg') else f'Thum.png'
 
 # Function to get video info including duration
 def get_youtube_video_info(url):
