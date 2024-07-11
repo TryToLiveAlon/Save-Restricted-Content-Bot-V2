@@ -55,8 +55,8 @@ async def start(event):
     user_id = event.sender_id
     collection.update_one({"user_id": user_id}, {"$set": {"user_id": user_id}}, upsert=True)
     buttons = [
-        [Button.url("Join Channel", url="https://t.me/devggn")],
-        [Button.url("Contact Me", url="https://t.me/ggnhere")],
+        [Button.url("Join Channel", url="https://t.me/TryToLiveAlon")],
+        [Button.url("Contact Me", url="https://t.me/TryToLiveAlon")],
     ]
     await gagan.send_file(
         event.chat_id,
@@ -125,7 +125,7 @@ PRE_TEXT = """💰 **Premium Price**: Starting from $2 or 200 INR accepted via *
 async def plan_command(event):
     # Creating inline keyboard with buttons
     buttons = [
-        [Button.url("Send Gift Card Code", url="https://t.me/ttonehelpbot")]
+        [Button.url("Send Gift Card Code", url="https://t.me/TryToLiveAlon")]
     ]
 
     # Sending photo with caption and buttons
@@ -148,8 +148,8 @@ TERM_TEXT = """📜 **Terms and Conditions** 📜\n
 async def term_command(event):
     # Creating inline keyboard with buttons
     buttons = [
-        [Button.url("Query?", url="https://t.me/ttonehelpbot"),
-         Button.url("Channel", url="https://telegram.dog/devggn")]
+        [Button.url("Query?", url="https://t.me/TryToLiveAlon"),
+         Button.url("Channel", url="https://t.me/TryToLiveAlon")]
     ]
 
     # Sending photo with caption and buttons
@@ -172,10 +172,7 @@ HELP_TEXT = """Here are the available commands:
 
 ➡️ /cancel - to cancel batches
 
-➡️ /settings - to edit settings.
-
-[GitHub Repository](%s)
-""" % REPO_URL
+➡️ /settings - to edit settings."""
 
 # Purchase premium for more website supported repo and /adl repo.
 
@@ -247,7 +244,7 @@ async def youtube_dl_command(_, message):
 
             # Get video metadata
             metadata = video_metadata(original_file)
-            caption = f"{video_info['title']}\n\n__**Powered by [Advance Content Saver Bot](https://t.me/advance_content_saver_bot)**__"  # Set caption to the title of the video
+            caption = f"{video_info['title']}\n\n__**Powered by [Advance Content Saver Bot](http://t.me/DeathSaveRestrictContent_Bot)**__"  # Set caption to the title of the video
             
             # Send the video file and thumbnail
             ggn = message.chat.id
