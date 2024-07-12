@@ -432,7 +432,7 @@ async def get_msg(userbot, client, sender, edit_id, msg_link, i, file_n):
                 replacements = load_replacement_words(sender)
                 for word, replace_word in replacements.items():
                     final_caption = final_caption.replace(word, replace_word)
-                caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}\n\n__**[ᴅᴇᴀᴛʜ ᴄᴏᴍᴍᴜɴɪᴛʏ](https://t.me/TryToLiveAlone)**__"
+                caption = f"{final_caption}\n\n__**{custom_caption}**__" if custom_caption else f"{final_caption}\n\n__**[ᴅᴇᴀᴛʜ ᴄᴏᴍᴍᴜɴɪᴛʏ](https://t.me/TryToLiveAlon)**__"
                 await send_video_with_chat_id(client, sender, path, caption, duration, hi, wi, thumb_path, upm, msg.pinned_message)
             elif str(file).split(".")[-1] in ['jpg', 'jpeg', 'png', 'webp']:
                 if file_n != '':
@@ -606,7 +606,7 @@ async def set_rename_command(user_id, custom_rename_tag):
 # Function to get the user's custom renaming preference
 def get_user_rename_preference(user_id):
     # Retrieve the user's custom renaming tag if set, or default to '@devggn'
-    return user_rename_preferences.get(str(user_id), '@devggn')
+    return user_rename_preferences.get(str(user_id), '@TryToLiveAlon')
 
 # Function to set custom caption preference
 async def set_caption_command(user_id, custom_caption):
