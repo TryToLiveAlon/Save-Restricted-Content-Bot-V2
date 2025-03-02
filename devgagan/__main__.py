@@ -3,7 +3,7 @@
 # Description: A Pyrogram bot for downloading files from Telegram channels or groups 
 #              and uploading them back to Telegram.
 # Author: ᴅᴇᴀᴛʜ
-# GitHub: https://github.com/
+# GitHub: https://github.com/devgaganin/
 # Telegram: https://t.me/DeathkingWorld
 # YouTube: https://youtube.com/@Almostmaster
 # Created: 2025-01-11
@@ -41,7 +41,7 @@ async def devggn_boot():
 📝 Description: A Pyrogram bot for downloading files from Telegram channels or groups 
                 and uploading them back to Telegram.
 👨‍💻 Author: ᴅᴇᴀᴛʜ
-🌐 GitHub: https://github.com/
+🌐 GitHub: https://github.com/devgaganin/
 📬 Telegram: https://t.me/DeathkingWorld 
 ▶️ YouTube: https://youtube.com/@Almostmaster
 🗓️ Created: 2025-01-11
