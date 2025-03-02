@@ -54,13 +54,13 @@
     },
     
     "WEBSITE_URL": {
-      "description": "Enter shortener website domain eg upshrink.com",
-      "value": "upshrink.com",
+      "description": "Enter shortener website domain eg Modijiurl.com",
+      "value": "Modijiurl.com",
       "required": false
     },
     "AD_API": {
       "description": "Batch size for premium users",
-      "value": "52b4a2cf4687d81e7d3f8f2b7bc2943f618e78cb",
+      "value": "cecd5d2f94043ddd1a36edc074e4eb18b13b39f1",
       "required": false
     },
     
